@@ -83,14 +83,13 @@ main {
 }
 
 .decorative-db {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin: 0 auto 1rem auto;
   width: 90px;
   height: 90px;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
 }
+
 
 p {
   font-size: 1.1rem;
