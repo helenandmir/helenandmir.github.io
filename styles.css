@@ -84,7 +84,7 @@ main {
 
 .decorative-db {
   position: absolute;
-  top: 5px;
+  top: 10px;
   padding-top: 5rem;
   left: 50%;
   transform: translateX(-50%);
