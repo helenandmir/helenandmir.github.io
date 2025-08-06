@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>צעד ראשון – יצירת מסד נתונים</title>
+    <link rel="icon" type="image/png" href="rainbow-1.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-h4g4tAq+aX9whJ9ZsDWU5tOngdRtvC1P9gNa/hYIq1ab9kSaJZqi5GZp2bapZkzJY07VEeKdZ0xEzbN8apFekg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="brand">
+          <img src="rainbow-1.png" alt="QueenB logo" class="brand-icon" />
+          <span class="brand-name">מדריך מסדי נתונים</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="card">
+        <h1 class="card-title">איך מתחילים?</h1>
+        <p>
+          כדי לבנות מסד נתונים, אין צורך בתוכנה מורכבת – כל מה שצריך הוא
+          Google Sheets! בצעו את השלבים הבאים כדי ליצור טבלה בסיסית משלכן:
+        </p>
+        <ol class="steps">
+          <li>
+            <strong>צעד 1:</strong> היכנסו לחשבון Google ולחצו על <em>Sheets</em>
+            ליצירת גיליון חדש.
+          </li>
+          <li>
+            <strong>צעד 2:</strong> הגדירו עמודות לטבלה – למשל "שם", "קטגוריה"
+            ו‑"כמות". כתבו מספר שורות לדוגמה.
+          </li>
+          <li>
+            <strong>צעד 3:</strong> השתמשו בפונקציה <code>=QUERY</code> כדי לבצע
+            שאילתות ולהוציא נתונים מסוימים מהטבלה. לדוגמה:
+            <code>=QUERY(A1:C10,"select A,B where C &gt; 5",1)</code>
+            תחזיר רק את השורות שבהן הכמות גדולה מ‑5.
+          </li>
+        </ol>
+        <!-- Sample table to illustrate a simple data set -->
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>שם</th>
+                <th>קטגוריה</th>
+                <th>כמות</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>אפרת</td>
+                <td>ספרים</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>מיכל</td>
+                <td>סרטים</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>טל</td>
+                <td>מוזיקה</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          הטבלה הפשוטה הזו תאפשר לכן להתנסות בשאילתות. נסו לשנות את המספרים
+          ולראות כיצד השאילתה משתנה בהתאם!
+        </p>
+        <!-- Navigation buttons -->
+        <div class="button-group">
+          <button class="cta-button secondary" onclick="location.href='index.html'">
+            <i class="fa fa-arrow-right"></i>
+            חזרה לדף הראשי
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

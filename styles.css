@@ -1,0 +1,245 @@
+/*
+ * Global stylesheet for the self‑study database guide.
+ * Colours and typography are chosen to echo the playful yet
+ * professional feel of the provided QueenB materials.
+ */
+
+:root {
+  --primary-pink: #ff74b1;
+  --light-pink: #ffe7f3;
+  --purple: #7e6be7;
+  --dark-text: #2c2c2c;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background: linear-gradient(180deg, var(--light-pink) 0%, #ffffff 50%, var(--light-pink) 100%);
+  color: var(--dark-text);
+  min-height: 100vh;
+  direction: rtl;
+}
+
+header {
+  background: var(--primary-pink);
+  padding: 1rem 0;
+}
+
+header .container {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header .brand {
+  display: flex;
+  align-items: center;
+}
+
+header .brand-icon {
+  width: 50px;
+  height: 50px;
+  margin-left: 0.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+header .brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+main {
+  width: 92%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.card {
+  position: relative;
+  background: #ffffff;
+  border: 4px solid var(--primary-pink);
+  border-radius: 18px;
+  padding: 2.5rem 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 8px 24px var(--card-shadow);
+  overflow: hidden;
+}
+
+.card-title {
+  text-align: center;
+  color: var(--purple);
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+}
+
+.decorative-db {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 90px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  text-align: right;
+}
+
+ol.steps {
+  margin-right: 1.4rem;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  counter-reset: step-counter;
+}
+
+ol.steps li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-right: 2rem;
+}
+
+ol.steps li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--purple);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+code {
+  background: #f4f0ff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: 'Courier New', monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid var(--primary-pink);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+thead th {
+  background: var(--light-pink);
+  color: var(--dark-text);
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+tbody td {
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+}
+
+tbody tr:nth-child(even) {
+  background: #fff8fc;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(to left, var(--purple), var(--primary-pink));
+  color: #ffffff;
+  border: none;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1.8rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button i {
+  font-size: 0.9rem;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary button style for returning to previous pages */
+.cta-button.secondary {
+  background: #ffffff;
+  color: var(--purple);
+  border: 2px solid var(--purple);
+  box-shadow: none;
+}
+
+.cta-button.secondary:hover {
+  background: var(--purple);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button-group {
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem 1.5rem;
+  }
+  .card-title {
+    font-size: 2rem;
+  }
+  p, ol.steps li {
+    font-size: 1rem;
+  }
+  .decorative-db {
+    width: 70px;
+    height: 70px;
+    top: -35px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .brand-name {
+    font-size: 1.2rem;
+  }
+  header .brand-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
