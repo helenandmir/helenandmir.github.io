@@ -70,7 +70,7 @@ main {
   padding: 2.5rem 2rem;
   margin-top: 3rem;
   box-shadow: 0 8px 24px var(--card-shadow);
-  overflow: hidden;
+  overflow: visible;
 }
 
 .card-title {
