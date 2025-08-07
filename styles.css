@@ -87,6 +87,11 @@ h2 {
   margin-top: 1.5rem;
   margin-bottom: 0.8rem;
 }
+.framed-image {
+  border: 2px solid #ffe7f3; 
+  padding: 4px;         
+  border-radius: 8px;     
+}
 
 .decorative-db {
   display: block;
