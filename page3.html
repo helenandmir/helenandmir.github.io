@@ -32,7 +32,7 @@
         <p>כדי לעשות את זה – נכיר כלי נהדר ופשוט לשימוש: פונקציית QUERY של Google Sheets.</p>
 
         <h2>מה זה QUERY ?</h2>
-        <p>QUERY היא פונקציה מיוחדת בגיליונות Google שמאפשרת לנו לשלוף נתונים מתוך טבלה – לפי כללים שאנחנו קובעות. במילים אחרות: היא מאפשרת לנו לשאול שאלות על הטבלה ולקבל את התשובות – בלי לעבור על כל הטבלה ידנית.</p>
+        <p>QUERY היא פונקציה מיוחדת בגיליונות Google שמאפשרת לנו לשלוף נתונים מתוך טבלה, לפי כללים שאנחנו קובעות. במילים אחרות: היא מאפשרת לנו לשאול שאלות על הטבלה ולקבל את התשובות – בלי לעבור על כל הטבלה ידנית.</p>
 
         <ul>
           <li>״תציגי רק את הרופאים שעוסקים בנוירולוגיה״</li>
@@ -42,7 +42,10 @@
 
         <h2>איך משתמשים בפונקציה?</h2>
         <p>בוחרים תא ריק בטבלה, וכותבים בו:<br />
-        <code>=QUERY(data, query, headers)</code></p>
+        <div class="centered-code">
+         <code>==QUERY(data, query, headers)</code>
+       </div>
+       
 
         <p>מה פירוש כל חלק בפונקציה?</p>
         <ul>
@@ -55,8 +58,10 @@
         <p>נניח שאנחנו רוצות לדעת אילו רופאים מרוויחים מעל 300,000 דולר בשנה.<br />
         נשתמש בפונקציה הבאה:</p>
 
-        <p><code>=QUERY(A1:E10, "SELECT A, B WHERE D > 300000", 1)</code></p>
-
+       <div class="centered-code">
+         <code>=QUERY(A1:E10, "SELECT A, B WHERE D > 300000", 1)</code>
+       </div>
+        
         <h3>מה המשמעות של כל חלק?</h3>
         <ul>
           <li><strong>A1:E10</strong> – זה טווח הטבלה שעליו מופעלת השאילתה. במקרה הזה: רק עשר השורות הראשונות בגיליון, כלומר 9 רשומות (שורה 1 היא כותרת, שורות 2–10 מכילות מידע על רופאים).</li>
@@ -72,12 +77,12 @@
         <p><strong>לסיכום</strong>, השאילתה מחזירה את השמות הפרטיים ושמות המשפחה של הרופאים שמרוויחים מעל 300 אלף דולר בשנה. והפונקציה QUERY מפעילה את השאילתה הזו רק על 18 הרשומות הראשונות בטבלה.</p>
 
         <div class="button-group">
-          <button class="cta-button" onclick="location.href='page3.html'">
+          <button class="cta-button" onclick="location.href='page2.html'">
             <span>חזרה לחלק 3</span>
             <i class="fa fa-arrow-right"></i>
           </button>
-          <button class="cta-button" onclick="location.href='page5.html'">
-            <span>המשך לחלק 5</span>
+          <button class="cta-button" onclick="location.href='page4.html'">
+            <span>המשך לחלק 4</span>
             <i class="fa fa-home"></i>
           </button>
         </div>
