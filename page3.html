@@ -65,6 +65,96 @@
         <h3>מה המשמעות של כל חלק?</h3>
         <ul>
           <li><strong>A1:E10</strong> – זה טווח הטבלה שעליו מופעלת השאילתה. במקרה הזה: רק עשר השורות הראשונות בגיליון, כלומר 9 רשומות (שורה 1 היא כותרת, שורות 2–10 מכילות מידע על רופאים).</li>
+           
+          <div class="table-container">
+          <table dir="ltr">
+            <thead>
+              <tr>
+                <th> </th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Salary</th>
+                <th>Medical Specialty</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2</td>
+                <td>Benjamin</td>
+                <td>Walker</td>
+                <td>66</td>
+                <td>364544</td>
+                <td>Surgery</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Olivia</td>
+                <td>Anderson</td>
+                <td>61</td>
+                <td>322359</td>
+                <td>Neurology</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Liam</td>
+                <td>Ramirez</td>
+                <td>38</td>
+                <td>169412</td>
+                <td>Surgery</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Amelia</td>
+                <td>Williams</td>
+                <td>38</td>
+                <td>205550</td>
+                <td>Radiology</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Elizabeth</td>
+                <td>Thompson</td>
+                <td>55</td>
+                <td>352116</td>
+                <td>Emergency Medicine</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Ava</td>
+                <td>Garcia</td>
+                <td>58</td>
+                <td>224434</td>
+                <td>Emergency Medicine</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Henry</td>
+                <td>Smith</td>
+                <td>44</td>
+                <td>333951</td>
+                <td>Surgery</td>
+              </tr>
+               <tr>
+                <td>9</td>
+                <td>Evelyn</td>
+                <td>Martin</td>
+                <td>69</td>
+                <td>255430</td>
+                <td>Cardiology</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Emma</td>
+                <td>Sanchez</td>
+                <td>69</td>
+                <td>392177</td>
+                <td>Dermatology</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+          
           <li><strong>SELECT A, B</strong> – אנחנו בוחרות להציג בתוצאה רק את עמודה A (שם פרטי) ועמודה B (שם משפחה).</li>
           <li><strong>WHERE D > 300000</strong> – אנחנו רוצות לסנן ולהציג רק את מי שמשתכרים מעל 300,000 דולר. D היא העמודה של השכר השנתי (Salary).</li>
         </ul>
@@ -76,6 +166,41 @@
 
         <p><strong>לסיכום</strong>, השאילתה מחזירה את השמות הפרטיים ושמות המשפחה של הרופאים שמרוויחים מעל 300 אלף דולר בשנה. והפונקציה QUERY מפעילה את השאילתה הזו רק על 18 הרשומות הראשונות בטבלה.</p>
 
+
+         <div class="table-container">
+          <table dir="ltr">
+            <thead>
+              <tr>
+                <th> </th>
+                <th>First Name</th>
+                <th>Last Name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Benjamin</td>
+                <td>Walker</td>
+              </tr>
+              <tr>
+                <td>Olivia</td>
+                <td>Anderson</td>
+              </tr>
+              <tr>
+                <td>Elizabeth</td>
+                <td>Thompson</td>
+              </tr>
+              <tr>
+                <td>Henry</td>
+                <td>Smith</td>
+              </tr>
+              <tr>
+                <td>Emma</td>
+                <td>Sanchez</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div class="button-group">
           <button class="cta-button" onclick="location.href='page2.html'">
             <span>חזרה לחלק 3</span>
