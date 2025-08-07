@@ -202,15 +202,20 @@ thead th {
   padding: 0.7rem 1rem;
   font-weight: 700;
   font-size: 1rem;
+
 }
 
 tbody td {
   padding: 0.7rem 1rem;
   font-size: 1rem;
+  text-align: center;
+
 }
 
 tbody tr:nth-child(even) {
   background: #fff8fc;
+  text-align: center;
+
 }
 
 tbody tr:last-child td {
