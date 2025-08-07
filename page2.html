@@ -1,37 +1,99 @@
 
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>תרגול - מסד נתונים רופאים</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>חלק 2 – בונים את מסד הנתונים הראשון שלנו</title>
+    <link rel="icon" type="image/png" href="rainbow-1.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-h4g4tAq+aX9whJ9ZsDWU5tOngdRtvC1P9gNa/hYIq1ab9kSaJZqi5GZp2bapZkzJY07VEeKdZ0xEzbN8apFekg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <h1>בניית מסד נתונים בגיליון אלקטרוני</h1>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="brand">
+          <img src="rainbow-1.png" alt="QueenB logo" class="brand-icon" />
+          <span class="brand-name">מדריך במסדי נתונים</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="card">
+        <h1 class="card-title">חלק 2: בונים את מסד הנתונים הראשון שלנו</h1>
 
-    <section>
-        <h2>שלבי עבודה</h2>
+        <p>
+        כעת, לאחר שהבנו מהו מסד נתונים ולמה הוא חשוב, הגיע הזמן להפשיל שרוולים ולהתנסות בעצמנו בבנייה של מסד נתונים קטן.
+        לצורך כך, נשתמש ב־Google Sheets – גיליון אלקטרוני מקוון (בדומה ל־Excel) שזמין בחינם, פשוט לתפעול, ונוח מאוד ללימוד ועבודה ראשונית עם נתונים.
+        Google Sheets הוא כלי נהדר ללימוד ראשוני ולעבודה בסיסית עם נתונים, על אף שאינו משמש כמסד נתונים מקצועי, ואינו תומך בכל היכולות המתקדמות שיש היום במסדי נתונים.
+        </p>
 
-        <h3>שלב 1: פתיחת גיליון חדש</h3>
-        <p>היכנסי ל-Google Drive ולחצי על כפתור הפלוס לפתיחת גיליון אלקטרוני חדש.</p>
-        <img src="s1.png" alt="פתיחת גיליון חדש" width="500">
+        <h2>מה נבנה?</h2>
+        <p>
+        ניצור מסד נתונים קטן, שיכלול טבלה אחת בלבד, ובה מידע על 200 רופאות ורופאים העובדים בבית חולים דמיוני.
+        הטבלה תכיל את השדות הבאים (כל שדה מהווה עמודה בטבלה):
+        </p>
+        <ul>
+          <li>First Name – שם פרטי</li>
+          <li>Last Name – שם משפחה</li>
+          <li>Age – גיל</li>
+          <li>Salary – שכר שנתי בדולרים</li>
+          <li>Medical Specialty – תחום התמחות רפואי</li>
+        </ul>
 
-        <h3>שלב 2: הזנת עמודות</h3>
-        <p>הקלידי את שמות השדות (כותרות העמודות) בשורה הראשונה: First Name, Last Name, Age, Salary, Medical Specialty.</p>
-        <img src="s2.png" alt="הזנת כותרות" width="500">
+        <h2>שלבי העבודה</h2>
 
-        <h3>שלב 3: הזנת נתונים</h3>
-        <p>הזיני נתונים עבור כל רופא/ה בשורות הבאות.</p>
-        <img src="s3.png" alt="הזנת רשומות" width="500">
+        <h3>שלב 1: פתיחת קובץ הנתונים לדוגמה</h3>
+        <p>היכנסו לקישור doctors_database – בקובץ תמצאו טבלה מוכנה הכוללת מידע דמיוני על רופאות ורופאים.</p>
 
-        <h3>שלב 4: סימון הטבלה</h3>
-        <p>סמני את הטבלה המלאה כולל השורה הראשונה.</p>
-        <img src="s4.png" alt="סימון הטבלה" width="500">
+        <h3>שלב 2: העתקת הטבלה</h3>
+        <p>סמנו את כל הטבלה באמצעות הקשה על Ctrl+A או ⌘+A במק. המידע אמור להיות מסומן בצבע כחול. לאחר מכן, הקישו על Ctrl+C כדי להעתיק את התוכן.</p>
 
-        <h3>שלב 5: שימוש בפונקציית QUERY</h3>
+        <h3>שלב 3: פתיחת גיליון חדש</h3>
+        <p>גשו ל־Google Sheets וצרו גיליון ריק חדש (לחצו על סימן הפלוס).</p>
+        <img src="s1.png" alt="פתיחת גיליון חדש" width="500" />
+
+        <h3>שלב 4: הדבקת המידע</h3>
+        <p>ודאו שהסמן עומד על התא הראשון (A1), והקישו Ctrl+V כדי להדביק את הטבלה כולה.</p>
+        <img src="s2.png" alt="הדבקת טבלה" width="500" />
+        <img src="s3.png" alt="נתונים מודבקים" width="500" />
+
+        <h3>שלב 5: שינוי שם הגיליון</h3>
+        <p>לחצו על שם הגיליון (כעת הוא כנראה נקרא 'גיליון ללא שם') ושנו אותו ל־DB_doctors.</p>
+        <img src="s4.png" alt="שינוי שם גיליון" width="500" />
+
+        <h2>ומה עכשיו?</h2>
+        <p>
+        עכשיו כשיש לכם את הטבלה – מתחילה ההרפתקה! תוכלו לשאול את הנתונים שאלות, למצוא דפוסים מעניינים, ולגלות כמה כוח יש למידע כשעובדים איתו נכון.
+        ברוכות הבאות לעולם של מסדי נתונים – זה הרבה יותר מגיליונות וטבלאות!
+        </p>
+
+        <h3>שלב 6: שימוש בפונקציית QUERY</h3>
         <p>לחצי בתא כלשהו מחוץ לטבלה וכתבי את הפונקציה QUERY עם השאילתה הרצויה.</p>
-        <img src="s5.png" alt="הזנת פונקציית QUERY" width="500">
-        <img src="s6.png" alt="תוצאת השאילתה" width="500">
-    </section>
-</body>
+        <img src="s6.png" alt="פונקציית QUERY" width="500" />
+        <img src="s5.png" alt="תוצאת השאילתה" width="500" />
+
+        <div class="button-group">
+          <button class="cta-button" onclick="location.href='page1.html'">
+            <span>חזרה לחלק 1</span>
+            <i class="fa fa-arrow-right"></i>
+          </button>
+          <button class="cta-button" onclick="location.href='index.html'">
+            <span>חזרה לעמוד הבית</span>
+            <i class="fa fa-home"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
