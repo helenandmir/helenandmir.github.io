@@ -244,6 +244,12 @@ tbody tr:last-child td {
 
 .button-group {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  direction: rtl; 
+  margin-top: 40px; 
+  padding: 0 20px;   
+}
 }
 
 /* Responsive adjustments */
