@@ -177,6 +177,7 @@ code {
 }
 .centered-code {
   text-align: center;
+  align-items: center;
   margin: 1rem 0;
   direction: ltr;
   font-family: "Courier New", monospace;
