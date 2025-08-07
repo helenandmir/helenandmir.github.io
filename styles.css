@@ -139,7 +139,7 @@ p {
 ol.steps {
   margin-right: 1.4rem;
   margin-top: 1rem;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   counter-reset: step-counter;
 }
