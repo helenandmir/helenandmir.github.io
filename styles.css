@@ -65,8 +65,9 @@ main {
   text-align: center;
   font-size: 0.9rem;
   color: #555;
+  margin-right : 0.7rem;
   margin-top: 40px;
-  padding-top: 20px;
+  padding-bottom : 0.1rem;
   border-top: 1px solid #ddd;
 }
 
