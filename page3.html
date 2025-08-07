@@ -1,192 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>חלק 2: יצירת מסד נתונים קטן</title>
-    <link rel="icon" type="image/png" href="rainbow-1.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-h4g4tAq+aX9whJ9ZsDWU5tOngdRtvC1P9gNa/hYIq1ab9kSaJZqi5GZp2bapZkzJY07VEeKdZ0xEzbN8apFekg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <style>
-      /* Additional styling specific to this page */
-      .step-section {
-        margin-top: 2.5rem;
-      }
-      .step-title {
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: var(--dark-text);
-      }
-      .step-wrapper {
-        display: flex;
-        align-items: flex-start;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-      .step-wrapper .visual {
-        flex: 1 1 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .sheet-icon {
-        width: 120px;
-        height: 120px;
-        border: 2px dashed var(--primary-pink);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
-        color: var(--primary-pink);
-      }
-      .step-text {
-        flex: 2 1 300px;
-        font-size: 1.1rem;
-        line-height: 1.6;
-      }
-      .callout-btn {
-        display: inline-block;
-        margin-top: 2rem;
-        background: var(--primary-pink);
-        color: #fff;
-        padding: 0.7rem 1.4rem;
-        border-radius: 30px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        border: none;
-        transition: background 0.2s ease;
-      }
-      .callout-btn:hover {
-        background: var(--purple);
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="container header-content">
-        <div class="brand">
-          <img src="rainbow-1.png" alt="QueenB logo" class="brand-icon" />
-          <span class="brand-name">מדריך מסדי נתונים</span>
-        </div>
-      </div>
-    </header>
-    <main>
-      <div class="card">
-        <h1 class="card-title">חלק 2: יצירת מסד נתונים קטן</h1>
-        <p>
-          בחלק זה נבנה מסד נתונים קטן שיכיל מידע על החברות והחברים שלכן. עקבו
-          אחרי ההוראות ותוכלו לארגן את המידע בצורה מסודרת ונגישה.
-        </p>
-        <!-- Step 1 -->
-        <div class="step-section">
-          <div class="step-title">שלב 1:</div>
-          <div class="step-wrapper">
-            <div class="visual">
-              <div class="sheet-icon">+</div>
-            </div>
-            <div class="step-text">
-              היכנסו ל‑<a href="https://docs.google.com/spreadsheets" target="_blank" rel="noopener">
-                Google Sheets
-              </a>
-              וצרו גיליון אלקטרוני חדש. לחצו על כפתור הפלוס ופתחו גיליון
-              ריק בו תעבדו.
-            </div>
-          </div>
-        </div>
-        <!-- Step 2 -->
-        <div class="step-section">
-          <div class="step-title">שלב 2:</div>
-          <div class="step-wrapper">
-            <div class="visual">
-              <!-- Empty table skeleton -->
-              <table>
-                <thead>
-                  <tr>
-                    <th>שם</th>
-                    <th>עיר</th>
-                    <th>תאריך לידה</th>
-                    <th>מספר טלפון</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
-                  <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
-                  <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="step-text">
-              הזינו לטבלה את השדות הבאים בעמודות הראשונות: <strong>שם</strong>,
-              <strong>עיר</strong>, <strong>תאריך לידה</strong> ו‑<strong>מספר טלפון</strong>.
-              הקלידו כותרות אלו בשורה הראשונה של הגיליון כדי שנוכל להשתמש
-              בהן בשלב הבא.
-            </div>
-          </div>
-        </div>
-        <!-- Step 3 -->
-        <div class="step-section">
-          <div class="step-title">שלב 3:</div>
-          <div class="step-wrapper">
-            <div class="visual">
-              <!-- Populated table sample -->
-              <table>
-                <tr>
-                    <th>E</th>
-                    <th>D</th>
-                    <th>C</th>
-                    <th>B</th>
-                    <th>A</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <thead>
-                  <tr>
-                    <th>שם</th>
-                    <th>עיר</th>
-                    <th>תאריך לידה</th>
-                    <th>מספר טלפון</th>
-                    <th>תחביב</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <thead>
-                  
-                <tbody>
-                  <tr><td>נועה</td><td>ירושלים</td><td>12/05/1998</td><td>052‑1234567</td><td>ציור</td><td>1</td></tr>
-                  <tr><td>מאיה</td><td>חיפה</td><td>30/09/1996</td><td>054‑7654321</td><td>בישול</td><td>2</td></tr>
-                  <tr><td>רוני</td><td>תל‑אביב</td><td>18/02/1997</td><td>050‑5556677</td><td>תכנות</td><td>3</td></tr>
-                  <tr><td>דנה</td><td>באר שבע</td><td>25/07/1995</td><td>053‑4449988</td><td>פסנתר</td><td>4</td></tr>
-                  <tr><td>שירי</td><td>ירושלים</td><td>11/11/1999</td><td>052‑9977553</td><td>ציור</td><td>5</td></tr>
-                  <tr><td>הדר</td><td>חיפה</td><td>05/03/1994</td><td>052‑6789123</td><td>כדורסל</td><td>6</td></tr>
-                  <tr></tr><td>אורית</td><td>תל‑אביב</td><td>23/08/1998</td><td>054‑3210678</td><td>פאזלים</td><td>7</td></tr>
-                  <tr><td>גלית</td><td>רעננה</td><td>16/12/1995</td><td>050‑1239876</td><td>משחקי מחשב</td><td>8</td></tr>
-                  <tr><td>הילה</td><td>עפולה</td><td>26/07/1995</td><td>053‑8339833</td><td>ריקוד</td><td>9</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="step-text">
-              מלאי לפחות 8 שורות עם מידע אמיתי או דמיוני על חברים וחברות. ככל
-              שתזינו יותר נתונים כך יהיה מעניין יותר לבצע עליהם שאילתות בהמשך!
-            </div>
-          </div>
-        </div>
-        <!-- Final call-to-action -->
-        <button class="callout-btn" onclick="alert('מצוין! עברו לשלב הבא בסדנה.')">
-          סיימתי!
-        </button>
-      </div>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>חלק 4: היכרות עם שאילתות</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card">
+    <h2>חלק 4: היכרות עם שאילתות</h2>
+    <p>אז בניתן טבלה עם 200 רופאות ורופאים, והמידע כבר שם.<br>
+    אבל איך שואלים שאלות על הטבלה?<br>
+    איך אפשר למשל לראות רק את הרופאים שמתמחים ברפואת ילדים? או רק את אלה שצעירים מגיל 40?</p>
+
+    <p>כדי לעשות את זה – נכיר כלי נהדר ופשוט לשימוש: פונקציית QUERY של Google Sheets.</p>
+
+    <h3>מה זה QUERY ?</h3>
+    <p>
+      QUERY היא פונקציה מיוחדת בגיליונות Google שמאפשרת לנו לשלוף נתונים מתוך טבלה – לפי כללים שאנחנו קובעות.
+      במילים אחרות: היא מאפשרת לנו לשאול שאלות על הטבלה ולקבל את התשובות – בלי לעבור על כל הטבלה ידנית.
+    </p>
+
+    <p>לדוגמה:</p>
+    <ul>
+      <li>״תציגי רק את הרופאים שעוסקים בנוירולוגיה״</li>
+      <li>״תציגי רק את מי שמרוויח\ה מעל 350,000 דולר״</li>
+      <li>״תמצאי את הרופא הכי צעיר שמתמחה ברפואת ילדים״</li>
+    </ul>
+
+    <h3>איך משתמשים בפונקציה?</h3>
+    <p>בוחרים תא ריק בטבלה, וכותבים בו:<br>
+    <code>=QUERY(data, query, headers)</code></p>
+
+    <p>מה פירוש כל חלק בפונקציה?</p>
+    <ul>
+      <li><b>data</b> – טווח התאים שמכיל את הטבלה שעליה אנחנו רוצות לעבוד (למשל A1:E10)</li>
+      <li><b>query</b> – השאלה שאנחנו שואלות על הנתונים, בניסוח פשוט באנגלית</li>
+      <li><b>headers</b> – כמה שורות עליונות בטווח הן שורות כותרת (כלומר: שמות השדות). בדרך כלל: 1</li>
+    </ul>
+
+    <h3>דוגמה מתוך הטבלה שלנו:</h3>
+    <p>
+      נניח שאנחנו רוצות לדעת אילו רופאים מרוויחים מעל 300,000 דולר בשנה.<br>
+      נשתמש בפונקציה הבאה:
+    </p>
+    <p><code>=QUERY(A1:E10, "SELECT A, B WHERE D > 300000", 1)</code></p>
+
+    <p>מה המשמעות של כל חלק?</p>
+    <ul>
+      <li><b>A1:E10</b> – זה טווח הטבלה שעליו מופעלת השאילתה. במקרה הזה: רק עשר השורות הראשונות בגיליון, כלומר 9 רשומות (שורה 1 היא כותרת, שורות 2–10 מכילות מידע על רופאים).</li>
+      <li><b>SELECT A, B</b> – אנחנו בוחרות להציג בתוצאה רק את עמודה A (שם פרטי) ועמודה B (שם משפחה).</li>
+      <li><b>WHERE D > 300000</b> – אנחנו רוצות לסנן ולהציג רק את מי שמשתכרים מעל 300,000 דולר. D היא העמודה של השכר השנתי (Salary).</li>
+    </ul>
+
+    <h3>מה נקבל כתוצאה?</h3>
+    <p>
+      הפונקציה תציג לנו רק את השמות הפרטיים ושמות המשפחה של הרופאים שמרוויחים יותר מ־300,000 דולר לשנה – מתוך הטווח A1:E10 בלבד.
+      כלומר, היא לא מסתכלת על כל הטבלה – אלא רק על החלק שבחרנו (A1:E10).
+    </p>
+
+    <p>
+      ה- <code>query</code> היא <code>SELECT A, B WHERE D > 300000</code>.<br>
+      הפעולה <code>SELECT A, B</code> אומרת בעצם שבתוצאה נציג את עמודות A ו-B – במקרה שלנו את השם הפרטי ואת שם המשפחה של הרופא.<br>
+      הפעולה <code>WHERE</code> מסננת את הרשומות ומציגה רק את הרשומות בהן <code>D &gt; 300000</code> – כלומר רק את הרופאים שמרוויחים יותר מ־300 אלף דולר בשנה.
+    </p>
+
+    <p>
+      לסיכום, השאילתה מחזירה את השמות הפרטיים ושמות המשפחה של הרופאים שמרוויחים מעל 300 אלף דולר בשנה.<br>
+      והפונקציה QUERY מפעילה את השאילתה הזו רק על 18 הרשומות הראשונות בטבלה.
+    </p>
+
+    <div class="button-group">
+      <a href="page3.html" class="button">חזרה לחלק 3</a>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>By Helen Sternbach for QueenB</p>
+  </footer>
+</body>
 </html>
