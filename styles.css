@@ -113,7 +113,7 @@ ul {
 }
 
 .side-by-side .text {
-  flex: 1; 
+  flex: 0; 
 }
 
 
