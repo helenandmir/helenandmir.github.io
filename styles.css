@@ -91,7 +91,7 @@ ul {
   padding-right: 2em;
 }
 .framed-image {
-  border: 2px solid #555; 
+  border: 2px solid #ff74b1; 
   padding: 4px;         
   border-radius: 8px;    
   display: block;
@@ -107,13 +107,13 @@ ul {
 }
 .side-by-side {
   display: flex;
-  align-items: center; /* מיישר לגובה אחיד */
-  gap: 2em;            /* רווח בין טקסט לתמונה */
-  margin-bottom: 2em;  /* רווח בין שלבים */
+  align-items: center; 
+  gap: 2em;          
+  margin-bottom: 2em;  
 }
 
 .side-by-side .text {
-  flex: 1; /* מאפשר לטקסט לתפוס את השטח הפנוי */
+  flex: 1; 
 }
 
 
