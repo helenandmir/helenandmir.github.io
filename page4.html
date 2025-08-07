@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>חלק 4 – הכרות עם הפעולות הבסיסיות של QUERY</title>
+    <link rel="icon" type="image/png" href="rainbow-1.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="brand">
+          <img src="rainbow-1.png" alt="QueenB logo" class="brand-icon" />
+          <span class="brand-name">מדריך במסדי נתונים</span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="card">
+        <h1 class="card-title">חלק 4: הכרות עם הפעולות הבסיסיות של QUERY</h1>
+
+        <p>עכשיו כשהבנו איך כותבים שאילתה עם QUERY נלמד מה באמת אפשר לעשות בעזרת הפונקציה הזו.</p>
+        <p>בעזרת מספר פעולות פשוטות, ניתן לשלוט בצורה חכמה על המידע שמוצג מתוך הטבלה: לבחור רק את העמודות שמעניינות אותנו, לסנן שורות, להגביל את מספר התוצאות ועוד.</p>
+
+        <h2>רשימת הפעולות המרכזיות של QUERY:</h2>
+        <ul>
+          <li>SELECT – לבחור עמודות</li>
+          <li>WHERE – להוסיף תנאי סינון</li>
+          <li>ORDER BY – למיין</li>
+          <li>LABEL – לשנות את שם הכותרת שמוצגת בתוצאה</li>
+          <li>LIMIT – להגביל את מספר השורות</li>
+          <li>GROUP BY – קיבוץ לפי שדה מסוים</li>
+          <li>AVG, SUM, COUNT – חישובים על קבוצות</li>
+        </ul>
+
+        <h2>ומה נלמד עכשיו?</h2>
+        <p>כדי לא להעמיס, נתחיל רק עם שתי הפעולות החשובות ביותר, שמספיקות כדי לבנות שאילתות פשוטות ושימושיות: SELECT ו־WHERE.</p>
+        <p>שתי הפעולות האלו הן בסיסיות ופשוטות, אבל נותנות לכן כוח גדול לעבוד עם הנתונים.</p>
+
+        <h3>פעולה 1: SELECT – בחירת עמודות להצגה</h3>
+        <p>הפעולה SELECT מאפשרת לבחור אילו שדות יופיעו בתוצאה, לפי האותיות שמייצגות אותן בגיליון (A, B, C..).</p>
+        <p><strong>דוגמה:</strong><br />
+        =QUERY(A1:E201, "SELECT A, B", 1)</p>
+        <p>תוצאה: מציגה רק את העמודות A ו־B – כלומר את השם הפרטי ואת שם המשפחה של כל הרופאים.</p>
+
+        <h4>סימן מיוחד: *</h4>
+        <p>כאשר נכתוב SELECT *, אנחנו בעצם אומרים למערכת: הצג את כל השדות בטבלה (כמו להגיד "הכול בבקשה"). זו דרך קצרה ונוחה לקבל את כל הנתונים – בלי לרשום כל עמודה בנפרד.</p>
+        <p><strong>דוגמה:</strong><br />
+        =QUERY(A1:E201, "SELECT *", 1)</p>
+        <p>תוצאה: יוצגו כל העמודות בטבלה וכל הרשומות שבטווח שנבחר (בדוגמה הזו, כל השורות בטבלה).</p>
+
+        <h3>פעולה 2: WHERE – לסנן את השורות לפי תנאים</h3>
+        <p>לא תמיד נרצה להציג את כל השורות בטבלה. WHERE עוזרת לנו להוסיף תנאי סינון, כך שנראה רק את השורות שמקיימות את התנאי.</p>
+
+        <p><strong>דוגמה 1:</strong><br />
+        =QUERY(A1:E201, "SELECT * WHERE E = 'Emergency Medicine’ AND D > 300000", 1)</p>
+        <p>תוצאה: יוצגו רק הרופאים שהתחום הרפואי שלהם (עמודה E) הוא רפואה דחופה והשכר שלהם (עמודה D) גבוה מ־300,000 דולר.</p>
+
+        <p><strong>דוגמה 2:</strong><br />
+        =QUERY(A1:E201, "SELECT A, B WHERE E = 'Emergency Medicine' OR E > 'Neurology'", 1)</p>
+        <p>תוצאה: מציגה את השם הפרטי ושם המשפחה של רופאים שהתחום הרפואי שלהם הוא רפואה דחופה או נוירולוגיה.</p>
+
+        <h2>לסיכום:</h2>
+        <p>עכשיו, אחרי שהכרתן את הפעולות הבסיסיות של QUERY – הגיע הזמן לתרגל ולהתנסות בעצמכן.</p>
+        <p>הטבלה של הרופאים כבר מוכנה, וכל מה שנשאר זה להתחיל לשאול אותה שאלות חכמות ומעניינות.</p>
+
+        <ul>
+          <li>מי הרופא הכי צעיר בטבלה?</li>
+          <li>מתוך הרופאים המתמחים בנוירולוגיה – מי מרוויח הכי הרבה?</li>
+          <li>מי הרופא הכי מבוגר?</li>
+          <li>אילו רופאים משתכרים מעל 350,000 דולר?</li>
+          <li>או: אילו רופאים צעירים מגיל 40?</li>
+        </ul>
+
+        <p>ועוד ועוד...</p>
+        <p>זכרו: כל שאלה כזו יכולה להפוך לשאילתה קטנה אחת – שתיתן לכן תשובה מדויקת ומיידית. ככל שתתרגלו יותר, תבינו עד כמה הכלי הזה חזק, גמיש ומהנה לשימוש.</p>
+
+        <div class="button-group">
+          <button class="cta-button" onclick="location.href='page3.html'">
+            <span>חזרה לחלק 3</span>
+            <i class="fa fa-arrow-right"></i>
+          </button>
+          <button class="cta-button" onclick="location.href='page5.html'">
+            <span>המשך לחלק 5</span>
+            <i class="fa fa-home"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
